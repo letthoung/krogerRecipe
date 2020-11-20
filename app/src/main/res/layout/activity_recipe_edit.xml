@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".RecipeDetailActivity">
+    tools:context=".RecipeEditActivity">
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:id="@+id/recipeDetailImage"
+        android:id="@+id/recipeEditImage"
         android:src="@drawable/recipe1"
         android:scaleType="centerCrop"
         />
@@ -21,32 +21,35 @@
         android:textStyle="bold"
         android:textColor="@color/colorAccent"
         android:text="title"
-        android:id="@+id/recipeDetailTitle"/>
+        android:id="@+id/recipeEditTitle"/>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
-        <TextView
+
+         <EditText
+            android:id="@+id/recipeEditDescription"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_above="@+id/detailEditButton"
+            android:layout_above="@+id/editDoneButton"
+            android:layout_marginTop="10dp"
+            android:gravity="start"
             android:padding="20dp"
-            android:text="Description"
-            android:textSize="19sp"
-            android:id="@+id/recipeDetailDescription"
             android:scrollbars="vertical"
-            />
+            android:text="Edit Description"
+            android:textSize="19sp"
+             />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:text="Edit"
+            android:text="Done"
             android:layout_margin="10dp"
-            android:id="@+id/detailEditButton"
-            android:onClick="editRecipeDescription"
+            android:id="@+id/editDoneButton"
+            android:onClick="finishEditDescription"
             />
     </RelativeLayout>
+
 </LinearLayout>

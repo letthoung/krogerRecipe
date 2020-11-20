@@ -27,9 +27,7 @@ class RecipeAdapter(private val mContext: Context, recipeDataList: List<RecipeDa
 
         holder.mCardView.setOnClickListener(View.OnClickListener {
             var intent = Intent(mContext, RecipeDetailActivity::class.java)
-            intent.putExtra("image", recipeDataList.get(holder.adapterPosition).recipeImage)
-            intent.putExtra("name", recipeDataList.get(holder.adapterPosition).recipeName)
-            intent.putExtra("description", recipeDataList.get(holder.adapterPosition).recipeDetailDescription)
+            intent.putExtra("position", holder.adapterPosition)
             mContext.startActivity(intent)
         })
     }
