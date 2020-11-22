@@ -51,6 +51,7 @@ class RecipeDetailActivity : AppCompatActivity() {
             EDIT_REQUEST_CODE -> {
                 if(resultCode == Activity.RESULT_OK){
                     recipeDescription.setText(AllRecipes.list[pos].recipeDetailDescription)
+                    Log.d("abcde",AllRecipes.list[pos].recipeDetailDescription.toString())
                 }
             }
         }

@@ -38,7 +38,6 @@ class RecipeEditActivity : AppCompatActivity() {
 
     fun finishEditDescription(view: View) {
         var intent = Intent()
-        //intent.putExtra("position", pos)
         AllRecipes.list[pos].recipeDetailDescription = recipeDescription.text.toString()
         setResult(Activity.RESULT_OK, intent)
         finish();
