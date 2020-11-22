@@ -27,7 +27,7 @@ class RecipeEditActivity : AppCompatActivity() {
         var mBundle : Bundle? = intent.extras
 
         if (mBundle != null){
-            var pos = mBundle.getInt("position")
+            pos = mBundle.getInt("position")
             recipeImage.setImageResource(AllRecipes.list[pos].recipeImage)
             recipeEditTitle.text = AllRecipes.list[pos].recipeName
             recipeDescription.setText(AllRecipes.list[pos].recipeDetailDescription)
@@ -37,9 +37,11 @@ class RecipeEditActivity : AppCompatActivity() {
     }
 
     fun finishEditDescription(view: View) {
-        var intent = Intent()
         AllRecipes.list[pos].recipeDetailDescription = recipeDescription.text.toString()
-        setResult(Activity.RESULT_OK, intent)
+        finish();
+    }
+
+    fun cancelEditDescription(view: View) {
         finish();
     }
 }

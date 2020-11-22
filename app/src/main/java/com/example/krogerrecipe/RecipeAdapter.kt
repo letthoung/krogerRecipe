@@ -2,6 +2,7 @@ package com.example.krogerrecipe
 
 import android.content.Context
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -28,6 +29,7 @@ class RecipeAdapter(private val mContext: Context, recipeDataList: List<RecipeDa
         holder.mCardView.setOnClickListener(View.OnClickListener {
             var intent = Intent(mContext, RecipeDetailActivity::class.java)
             intent.putExtra("position", holder.adapterPosition)
+            Log.d("abc", holder.adapterPosition.toString())
             mContext.startActivity(intent)
         })
     }

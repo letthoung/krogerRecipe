@@ -32,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_above="@+id/editDoneButton"
+            android:layout_above="@+id/editConfirmationButtons"
             android:layout_marginTop="10dp"
             android:gravity="start"
             android:padding="20dp"
@@ -40,16 +40,34 @@
             android:text="Edit Description"
             android:textSize="19sp"
              />
-        <Button
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:text="Done"
-            android:layout_margin="10dp"
-            android:id="@+id/editDoneButton"
-            android:onClick="finishEditDescription"
-            />
+            android:gravity="center"
+            android:id="@+id/editConfirmationButtons">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Cancel"
+                android:layout_margin="10dp"
+                android:id="@+id/editCancelButton"
+                android:onClick="cancelEditDescription"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="Done"
+                android:layout_margin="10dp"
+                android:id="@+id/editDoneButton"
+                android:onClick="finishEditDescription"
+                />
+        </LinearLayout>
+
     </RelativeLayout>
 
 </LinearLayout>
